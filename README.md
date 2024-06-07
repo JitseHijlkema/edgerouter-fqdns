@@ -26,22 +26,23 @@ In a dynamic environment where IP addresses may change often, it could be necess
 
 # Installation
 
-- Download latest copy of the 2 script files:
+- Download latest copy of the 3 script files:
 
-		wrapper_fqdns.sh
-		fqdns.py
+		wrapper_fqdns_v4_v6.sh
+		fqdns_v4.py
+		fqdns_v6.py
 
 - Upload the scripts into EdgeRouter: /config/user-data/scripts/
    - Note: this folder is designed to hold users' scripts and does not get wiped during upgrades.
    - Note: you might need to chmod +x the 2 script files after upload  
 - Choose a desired interval and enable the script to run. Example with 15 minutes interval:
 
-		set system task-scheduler task update_fqdns executable path /config/user-data/scripts/wrapper_fqdns.sh
+		set system task-scheduler task update_fqdns executable path /config/user-data/scripts/wrapper_fqdns_v4_v6.sh
 		set system task-scheduler task update_fqdns interval 15m
 
 Note that you can run the script manually to check if all is in order:
 
-		ubnt@my_edgerouter:~$ sudo /config/user-data/scripts/wrapper_fqdns.sh
+		ubnt@my_edgerouter:~$ sudo /config/user-data/scripts/wrapper_fqdns_v4_v6.sh
 		ubnt@my_edgerouter:~$
 
 # Usage
@@ -98,5 +99,4 @@ The Python part of the script is compatible with Python 2.7. The embedded versio
 
 # Credits
 Author: Jeremy Diaz
-
-I used various posts on UI Community forums to create this script.
+Update: Jitse Hijlkema
