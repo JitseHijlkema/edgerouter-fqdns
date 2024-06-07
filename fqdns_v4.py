@@ -128,7 +128,7 @@ for idx,line in enumerate(lstLinesAddr, start=0):
 
 ###
 ### First we're going to resolve all our FQDNS
-### 
+###
 # Loop through the list, through the words
 for lstCmdDesc in lstLinesDesc:
     # Description value is at index pos_txt_description, and should start with prefix
@@ -141,7 +141,7 @@ for lstCmdDesc in lstLinesDesc:
 
 ###
 ### Then we're going to compare with what's already in the addresses
-### 
+###
 # Loop through the list, through the words
 if not lstLinesAddr == [[]]:
     for lstCmdAddr in lstLinesAddr:
